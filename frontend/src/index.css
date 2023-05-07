@@ -1,0 +1,22 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Sets the background color of the header to #404040 and adds 1rem of padding */
+header {
+  background-color: #404040;
+  padding:1rem;
+}
+
+/* Sets the color of the links inside the header to #ffffff and makes the font bold */
+header a{
+  color:#ffffff;
+  font-weight: bold;
+  text-decoration: none;
+}
+
