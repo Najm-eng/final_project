@@ -8,3 +8,9 @@
 - adding router with the following code npm i react-router-dom
 - router for home page and one for product page
 - created projectPage and linked to HomePage
+- create server.js
+- ccreate route for api
+- returen the products
+- fetch products from backend
+- use state hook
+- use reducer hook
