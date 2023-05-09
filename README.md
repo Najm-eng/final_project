@@ -14,3 +14,7 @@
 - fetch products from backend
 - use state hook
 - use reducer hook
+- created loggermiddeware.js and using in instead of use reducer-logger
+- add bootstrap UI framework
+- using bootstrap react bootstrap and react-router-bootsrap
+-

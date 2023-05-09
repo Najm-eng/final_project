@@ -2,7 +2,8 @@ import { Link } from 'react-router-dom';
 //import prod from '../data'; // Import the product data
 import { useEffect, useReducer, useState } from 'react';
 import axios from 'axios';
-import logger from 'use-reducer-logger';
+import loggerMiddleware from '../loggerMiddleware';
+//import logger from 'use-reducer-logger';
 // Reducer function for managing product fetching state
 const reducer = (state, action) => {
   switch (action.type) {
@@ -20,7 +21,8 @@ const reducer = (state, action) => {
 function HomePage() {
   //const [products, setProducts] = useState([]);
   // Use reducer to manage the state of products, loading, and error
-  const [{ loading, error, products }, dispatch] = useReducer(logger(reducer), {
+  const loggedUseReducer = loggerMiddleware(useReducer);
+  const [{ loading, error, products }, dispatch] = loggedUseReducer(reducer, {
     products: [],
     loading: true,
     error: '',
