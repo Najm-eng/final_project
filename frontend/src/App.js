@@ -9,7 +9,7 @@ import { LinkContainer } from 'react-router-bootstrap';
 import { useContext } from 'react';
 import { Store } from './Store';
 import CartPage from './pages/CartPage';
-
+import SigninPage from './pages/SinginPage';
 
 function App() {
   const { state } = useContext(Store);
@@ -45,6 +45,7 @@ function App() {
               {/* Route for individual product pages */}
               <Route path="/product/:slug" element={<ProductPage />} />
               <Route path="/cart" element={<CartPage />} />
+              <Route path="/signin" element={<SigninPage />} />
               {/* Route for the homepage */}
               <Route path="/" element={<HomePage />} />
             </Routes>

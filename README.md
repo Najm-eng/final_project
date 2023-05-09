@@ -22,3 +22,7 @@
 - create react context for adding items to cart
 - reactjs.org/docs/context.html
 - creating shopping cart screen
+- adding functionality to cart screen
+- createing action column
+- making only to add items up to what i have in stack
+- creating sing in page
