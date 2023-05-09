@@ -8,7 +8,8 @@ const prod = {
       image: '/images/shirt1.jpg', // URL of the product image
       price: 120, // Price of the product
       brand: 'brand', // Brand of the product
-      rateing: 4.5, // Rating of the product
+      countInStock: 10,
+      rating: 4.5, // Rating of the product
       numReviews: 10, // Number of reviews of the product
       description: 'slkdjfl', // Description of the product
     },
@@ -18,8 +19,9 @@ const prod = {
       category: 'cot',
       image: '/images/shirt2.jpg', // 679px*829px
       price: 120,
+      countInStock: 10,
       brand: 'brand',
-      rateing: 4.5,
+      rating: 4.5,
       numReviews: 10,
       description: 'slkdjfl',
     },
@@ -30,7 +32,8 @@ const prod = {
       image: '/images/shirt3.jpg',
       price: 120,
       brand: 'brand',
-      rateing: 4.5,
+      countInStock: 10,
+      rating: 4.5,
       numReviews: 10,
       description: 'slkdjfl',
     },

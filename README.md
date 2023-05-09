@@ -17,4 +17,4 @@
 - created loggermiddeware.js and using in instead of use reducer-logger
 - add bootstrap UI framework
 - using bootstrap react bootstrap and react-router-bootsrap
--
+- add product page to show products info

@@ -14,7 +14,7 @@ function App() {
           <Navbar bg="dark" variant="dark">
             <Container>
               <LinkContainer to="/">
-                <Navbar.Brand>amazona</Navbar.Brand>
+                <Navbar.Brand>O&N Market</Navbar.Brand>
               </LinkContainer>
             </Container>
           </Navbar>
@@ -22,7 +22,7 @@ function App() {
         {/* Main content section */}
         <main>
           {/* Define routes for the application */}
-          <Container>
+          <Container className="mt-3">
             <Routes>
               {/* Route for individual product pages */}
               <Route path="/product/:slug" element={<ProductPage />} />

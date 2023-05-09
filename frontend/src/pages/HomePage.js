@@ -1,8 +1,12 @@
-import { Link } from 'react-router-dom';
+//import { Link } from 'react-router-dom';
 //import prod from '../data'; // Import the product data
-import { useEffect, useReducer, useState } from 'react';
+import React, { useEffect, useReducer, useState } from 'react';
 import axios from 'axios';
 import loggerMiddleware from '../loggerMiddleware';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import Product from '../components/Product';
+import { Helmet } from 'react-helmet-async';
 //import logger from 'use-reducer-logger';
 // Reducer function for managing product fetching state
 const reducer = (state, action) => {
@@ -46,6 +50,9 @@ function HomePage() {
   }, []);
   return (
     <div>
+      <Helmet>
+        <title>O&N Market</title>
+      </Helmet>
       <h1>list of products</h1>
       {/* Container for product list */}
       <div className="products">
@@ -57,25 +64,13 @@ function HomePage() {
           <div>{error}</div>
         ) : (
           // Map through the products and create a product card for each
-          products.map((product) => (
-            <div className="product" key={product.slug}>
-              {/* Product image link */}
-              <Link to={`/product/${product.slug}`}>
-                <img src={product.image} alt={product.name} />
-              </Link>
-              {/* Product details container */}
-              <div className="product-details">
-                {/* Product name link */}
-                <Link to={`/product/${product.slug}`}>
-                  <p>{product.name}</p>
-                </Link>
-                <p>
-                  <strong>${product.price}</strong>
-                </p>
-                <button>Add to cart</button>
-              </div>
-            </div>
-          ))
+          <Row>
+            {products.map((product) => (
+              <Col key={product.slug} sm={6} md={4} lg={3} className="mb-3">
+                <Product product={product}></Product>
+              </Col>
+            ))}
+          </Row>
         )}
       </div>
     </div>
