@@ -37,6 +37,18 @@ const prod = {
       numReviews: 10,
       description: 'slkdjfl',
     },
+    {
+      name: 'name4',
+      slug: 'model3',
+      category: 'cot',
+      image: '/images/shirt4.jpg',
+      price: 120,
+      brand: 'brand',
+      countInStock: 10,
+      rating: 4.5,
+      numReviews: 10,
+      description: 'slkdjfl',
+    },
   ],
 };
 

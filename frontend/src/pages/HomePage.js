@@ -7,6 +7,8 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Product from '../components/Product';
 import { Helmet } from 'react-helmet-async';
+import LoadingBox from '../components/LoadingBox';
+import MessageBox from '../components/MessageBox';
 //import logger from 'use-reducer-logger';
 // Reducer function for managing product fetching state
 const reducer = (state, action) => {
@@ -56,12 +58,12 @@ function HomePage() {
       <h1>list of products</h1>
       {/* Container for product list */}
       <div className="products">
-        {/* Show loading message if data is being fetched */}
+        {/* Show loading message if data is being fetched from ladingbox.js*/}
         {loading ? (
-          <div>Loading...</div>
+          <LoadingBox />
         ) : error ? (
-          // Show error message if there was an error fetching data
-          <div>{error}</div>
+          // Show error message if there was an error fetching data from messagebox.js
+          <MessageBox variant="danger">{error}</MessageBox>
         ) : (
           // Map through the products and create a product card for each
           <Row>

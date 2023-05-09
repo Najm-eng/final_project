@@ -2,6 +2,7 @@
 const prod = {
   products: [
     {
+      _id: '1',
       name: 'name1', // Name of the product
       slug: 'model0', // Slug of the product
       category: 'cot', // Category of the product
@@ -14,6 +15,7 @@ const prod = {
       description: 'slkdjfl', // Description of the product
     },
     {
+      _id: '2',
       name: 'name2',
       slug: 'model1',
       category: 'cot',
@@ -26,10 +28,24 @@ const prod = {
       description: 'slkdjfl',
     },
     {
+      _id: '3',
       name: 'name3',
       slug: 'model2',
       category: 'cot',
       image: '/images/shirt3.jpg',
+      price: 120,
+      brand: 'brand',
+      countInStock: 10,
+      rating: 4.5,
+      numReviews: 10,
+      description: 'slkdjfl',
+    },
+    {
+      _id: '4',
+      name: 'name4',
+      slug: 'model3',
+      category: 'cot',
+      image: '/images/shirt4.jpg',
       price: 120,
       brand: 'brand',
       countInStock: 10,

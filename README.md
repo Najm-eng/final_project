@@ -18,3 +18,7 @@
 - add bootstrap UI framework
 - using bootstrap react bootstrap and react-router-bootsrap
 - add product page to show products info
+- loading message and spinner componenets
+- create react context for adding items to cart
+- reactjs.org/docs/context.html
+- creating shopping cart screen
