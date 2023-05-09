@@ -26,3 +26,5 @@
 - createing action column
 - making only to add items up to what i have in stack
 - creating sing in page
+- connect to mandodb database
+
