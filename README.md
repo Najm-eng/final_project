@@ -27,4 +27,8 @@
 - making only to add items up to what i have in stack
 - creating sing in page
 - connect to mandodb database
+- connect to local db
+- create Product model
+- create seed route
+
 

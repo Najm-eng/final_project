@@ -2,7 +2,6 @@
 const prod = {
   products: [
     {
-      _id: '1',
       name: 'name1', // Name of the product
       slug: 'model0', // Slug of the product
       category: 'cot', // Category of the product
@@ -15,7 +14,6 @@ const prod = {
       description: 'slkdjfl', // Description of the product
     },
     {
-      _id: '2',
       name: 'name2',
       slug: 'model1',
       category: 'cot',
@@ -28,7 +26,6 @@ const prod = {
       description: 'slkdjfl',
     },
     {
-      _id: '3',
       name: 'name3',
       slug: 'model2',
       category: 'cot',
@@ -41,7 +38,6 @@ const prod = {
       description: 'slkdjfl',
     },
     {
-      _id: '4',
       name: 'name4',
       slug: 'model3',
       category: 'cot',
