@@ -30,5 +30,6 @@
 - connect to local db
 - create Product model
 - create seed route
-
-
+- createing a user model
+- creating user routes
+- insert bcryptjs to create encrypted password

@@ -1,5 +1,20 @@
 // Defines an object named `prod` containing an array of product objects
+import bcrypt from 'bcryptjs';
 const prod = {
+  users: [
+    {
+      name: 'Najm',
+      email: 'admin@example.com',
+      password: bcrypt.hashSync('123456'),
+      isAdmin: true,
+    },
+    {
+      name: 'John',
+      email: 'user@example.com',
+      password: bcrypt.hashSync('123456'),
+      isAdmin: false,
+    },
+  ],
   products: [
     {
       name: 'name1', // Name of the product
