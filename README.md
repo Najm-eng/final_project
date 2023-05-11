@@ -47,3 +47,4 @@
 - creating payment method page
 - create preview order page
 - create api for create
+- creating place order page
