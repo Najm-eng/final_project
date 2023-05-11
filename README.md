@@ -33,3 +33,8 @@
 - createing a user model
 - creating user routes
 - insert bcryptjs to create encrypted password
+- creating an api for sign in
+- add some functionality to singin page
+- adding react toatitfy to show error message
+- adding userinfo to the main page after signing in
+- redirecting users to main after siging in
