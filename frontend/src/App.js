@@ -13,13 +13,20 @@ import { useContext } from 'react';
 import { Store } from './Store';
 import CartPage from './pages/CartPage';
 import SigninPage from './pages/SinginPage';
+import ShippingAddressPage from './pages/ShippingAddressPage';
+import SignupPage from './pages/SignupPage';
+import PaymentMethodPage from './pages/PaymentMethodPage';
+import PlaceOrderPage from './pages/PlaceOrderPage';
 
 function App() {
   const { state, dispatch: ctxDispatch } = useContext(Store);
   const { cart, userInfo } = state;
+  // to remove the the pages form singout like payment method
   const signoutHandler = () => {
     ctxDispatch({ type: 'USER_SIGNOUT' });
     localStorage.removeItem('userInfo');
+    localStorage.removeItem('shippingAddress');
+    localStorage.removeItem('paymentMethod');
   };
 
   // Main App component
@@ -78,8 +85,12 @@ function App() {
               <Route path="/product/:slug" element={<ProductPage />} />
               <Route path="/cart" element={<CartPage />} />
               <Route path="/signin" element={<SigninPage />} />
+              <Route path="/signup" element={<SignupPage />} />
+              <Route path="/payment" element={<PaymentMethodPage />}></Route>
+              <Route path="/placeorder" element={<PlaceOrderPage />} />
               {/* Route for the homepage */}
               <Route path="/" element={<HomePage />} />
+              <Route path="/shipping" element={<ShippingAddressPage />}></Route>
             </Routes>
           </Container>
         </main>

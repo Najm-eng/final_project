@@ -38,3 +38,12 @@
 - adding react toatitfy to show error message
 - adding userinfo to the main page after signing in
 - redirecting users to main after siging in
+- adding sipping page
+- creating form inputs
+- handle save shipping address
+- add checkout bar
+- creating sign up page
+- handul submit
+- creating payment method page
+- create preview order page
+- create api for create

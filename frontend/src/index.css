@@ -58,3 +58,15 @@ main {
 .small-container {
   max-width: 600px;
 }
+
+/* the shipping page the color of the line  */
+.checkout-steps > div {
+  border-bottom: 0.2rem solid #a0a0a0;
+  color: #a0a0a0;
+}
+
+/* the shipping page the color of the line  */
+.checkout-steps > div.active {
+  border-bottom: 0.2rem solid #f08000;
+  color: #f08000;
+}
