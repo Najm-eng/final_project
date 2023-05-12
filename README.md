@@ -54,4 +54,7 @@
 - implement onapprove payment function
 - creating order history page
 - creating a user profile page
-- puplish to render
+- puplish to heroku
+- add search bar
+- show filter
+- creating api for searching products

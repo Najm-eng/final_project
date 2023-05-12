@@ -4,7 +4,7 @@ const prod = {
     {
       name: 'name1', // Name of the product
       slug: 'model0', // Slug of the product
-      category: 'cot', // Category of the product
+      category: 'shirt', // Category of the product
       image: '/images/shirt1.jpg', // URL of the product image
       price: 120, // Price of the product
       countInStock: 10,
@@ -16,7 +16,7 @@ const prod = {
     {
       name: 'name2',
       slug: 'model1',
-      category: 'cot',
+      category: 'shirt',
       image: '/images/shirt2.jpg', // 679px*829px
       price: 120,
       countInStock: 10,
@@ -28,7 +28,7 @@ const prod = {
     {
       name: 'name3',
       slug: 'model2',
-      category: 'cot',
+      category: 'shirt',
       image: '/images/shirt3.jpg',
       price: 120,
       countInStock: 10,
@@ -40,7 +40,7 @@ const prod = {
     {
       name: 'name4',
       slug: 'model3',
-      category: 'cot',
+      category: 'shirt',
       image: '/images/shirt4.jpg',
       price: 120,
       brand: 'brand',
