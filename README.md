@@ -48,3 +48,10 @@
 - create preview order page
 - create api for create
 - creating place order page
+- add PayPal payment
+- generate payple client id
+- create api to client id
+- implement onapprove payment function
+- creating order history page
+- creating a user profile page
+- puplish to render

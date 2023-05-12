@@ -1,1 +1,14 @@
-{}
+{
+  "name": "amazona",
+  "description": "- create react app\r - create git repository\r - create data file for the products and exporting\r - styleing the home page with css\r - modifing app.js to render the home page project\r - adding router with the following code npm i react-router-dom\r - router for home page and one for product page\r - created projectPage and linked to HomePage\r - create server.js\r - ccreate route for api\r - returen the products\r - fetch products from backend\r - use state hook\r - use reducer hook\r - created loggermiddeware.js and using in instead of use reducer-logger\r - add bootstrap UI framework\r - using bootstrap react bootstrap and react-router-bootsrap\r - add product page to show products info\r - loading message and spinner componenets\r - create react context for adding items to cart\r - reactjs.org/docs/context.html\r - creating shopping cart screen\r - adding functionality to cart screen\r - createing action column\r - making only to add items up to what i have in stack\r - creating sing in page\r - connect to mandodb database\r - connect to local db\r - create Product model\r - create seed route\r - createing a user model\r - creating user routes\r - insert bcryptjs to create encrypted password\r - creating an api for sign in\r - add some functionality to singin page\r - adding react toatitfy to show error message\r - adding userinfo to the main page after signing in\r - redirecting users to main after siging in\r - adding sipping page\r - creating form inputs\r - handle save shipping address\r - add checkout bar\r - creating sign up page\r - handul submit\r - creating payment method page\r - create preview order page\r - create api for create\r - creating place order page\r - add PayPal payment\r - generate payple client id\r - create api to client id\r - implement onapprove payment function\r - creating order history page\r - creating a user profile page\r - puplish to render",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "build": "cd backend && npm install  && cd ../frontend && npm install && npm run build",
+    "start": "node backend/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
