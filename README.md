@@ -59,3 +59,8 @@
 - show filter
 - creating api for searching products
 - creating admin menu
+- create admin page
+- useing google react chart to show the chart in admin page
+- creating produts list for admin
+- create product page
+- making edit product in the admin side
