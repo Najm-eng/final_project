@@ -64,3 +64,6 @@
 - creating produts list for admin
 - create product page
 - making edit product in the admin side
+- using cloudinary to uplouad pic
+- uploading streamifier and multer library
+- provide delete button to delete products
