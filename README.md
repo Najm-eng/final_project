@@ -72,3 +72,4 @@
 - implement delete order
 - add a list of users in the admin side
 - implement list users and delete users
+- add feature of sending email order receipt using mailgun
