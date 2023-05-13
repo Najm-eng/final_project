@@ -67,3 +67,8 @@
 - using cloudinary to uplouad pic
 - uploading streamifier and multer library
 - provide delete button to delete products
+- creating a list order page
+- implement delivery info
+- implement delete order
+- add a list of users in the admin side
+- implement list users and delete users

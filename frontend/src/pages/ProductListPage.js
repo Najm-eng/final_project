@@ -189,6 +189,7 @@ export default function ProductListPage() {
                       type="button"
                       variant="light"
                       onClick={() => deleteHandler(product)}
+                      className="delete-button"
                     >
                       Delete
                     </Button>

@@ -95,11 +95,15 @@ main {
   left: 0;
 }
 
-
 /* for the review (filtier)*/
 
 .text-bold {
   font-weight: bold;
 }
 
+/*background-color: #B30000;*/
 
+.delete-button:hover,
+.delete-button:focus {
+  background-color: #df1b1b;
+}
