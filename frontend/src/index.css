@@ -156,7 +156,16 @@ footer .logo {
 footer .follow {
   margin-top: 20px;
 }
+footer .icon ul {
+  list-style-type: none; /* Remove default bullet points */
+  padding: 0; /* Remove default padding */
+  margin: 0; /* Remove default margin */
+}
 
+footer .icon ul li {
+  display: inline-block; /* Display list items inline */
+  margin-right: 10px; /* Add some space to the right of each icon */
+}
 footer .follow i {
   color: #465b52;
   padding-right: 4px;
@@ -220,7 +229,6 @@ footer a {
 }
 
 footer .install .row img {
-  border: 1px solid #088178;
   border-radius: 6px;
 }
 
@@ -242,9 +250,8 @@ footer a:hover {
   width: 100%;
 }
 
-
 #newsletter {
-  background-image: url("/src/pages/banner/b1.jpg");
+  background-image: url('/public/banner/b1.jpg');
   background-repeat: no-repeat;
   background-position: 20% 30%;
   background-color: #041e42;
@@ -269,8 +276,3 @@ footer a:hover {
 #newsletter p span {
   color: #ffbd27;
 }
-
-
-
-
-
