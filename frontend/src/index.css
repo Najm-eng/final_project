@@ -108,11 +108,11 @@ main {
 }
 @media (max-width: 768px) {
   .side-navbar {
-    width: 140px; /* adjust this for mobile view */
+    width: 120px; /* adjust this for mobile view */
   }
 
   .active-cont {
-    margin-left: 140px; /* adjust this for mobile view */
+    margin-left: 120px; /* adjust this for mobile view */
   }
 }
 /* for the review (filtier)*/
