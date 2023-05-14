@@ -21,32 +21,44 @@ main {
   background-color: #f0c040;
   color: #000000;
 }
-
-/* Product list container styles */
 .products {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  gap: 1rem; /* Add some space between your cards */
 }
+/* Product list container styles */
+
 .rating span {
-  color: #ffc000;
+  color: #fcc000;
 }
 
 /* Product card container styles */
 .product {
   border: 1px #404040 solid;
   margin: 1rem;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Product image styles */
-.product img {
-  width: 100%;
-  max-width: 400px;
+
+.product-image {
+  width: 100;
+  height: 0;
+  padding-bottom: 125%; /* This is for an aspect ratio of 4:3. Adjust as needed. */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 /* Product details container styles */
 .product-details {
   padding: 1rem;
+  flex-grow: 1; /* This will push your buttons to the bottom */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .img-large {
   max-width: 100%;

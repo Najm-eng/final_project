@@ -68,7 +68,15 @@ function HomePage() {
           // Map through the products and create a product card for each
           <Row>
             {products.map((product) => (
-              <Col key={product.slug} sm={6} md={4} lg={3} className="mb-3">
+              <Col
+                key={product.slug}
+                xs={6}//2
+                sm={6}//2
+                md={4}//3
+                lg={3}//4
+                xl={2}
+                className="products"
+              >
                 <Product product={product}></Product>
               </Col>
             ))}
