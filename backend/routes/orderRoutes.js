@@ -138,6 +138,16 @@ orderRouter.put(
       };
 
       const updatedOrder = await order.save();
+      // update quantity
+      for (const item of updatedOrder.orderItems) {
+        const product = await Product.findById(item.product);
+        if (product) {
+          product.countInStock -= item.quantity;
+          await product.save();
+        }
+      }
+
+
       mailgun()
         .messages()
         .send(

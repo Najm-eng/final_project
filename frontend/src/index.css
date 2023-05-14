@@ -93,7 +93,7 @@ main {
   height: 100%;
   position: absolute;
   left: -300px;
-  background-color: #100901;
+  background-color: #0d0a06;
   transition: 0.5s;
 }
 
@@ -106,7 +106,15 @@ main {
 .active-nav {
   left: 0;
 }
+@media (max-width: 768px) {
+  .side-navbar {
+    width: 140px; /* adjust this for mobile view */
+  }
 
+  .active-cont {
+    margin-left: 140px; /* adjust this for mobile view */
+  }
+}
 /* for the review (filtier)*/
 
 .text-bold {
@@ -119,3 +127,150 @@ main {
 .delete-button:focus {
   background-color: #df1b1b;
 }
+.small-screen .nav-link {
+  font-size: 0.8rem; /* Adjust the font size as needed */
+}
+.mobile-categories {
+  /* Add the styles you want for mobile view here */
+  font-size: 0.8rem; /* example: smaller font size */
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Spartan', sans-serif;
+}
+/* footer */
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+footer .logo {
+  margin-bottom: 30px;
+}
+
+footer .follow {
+  margin-top: 20px;
+}
+
+footer .follow i {
+  color: #465b52;
+  padding-right: 4px;
+  cursor: pointer;
+}
+ul li a .fab {
+  height: 100%;
+  display: block;
+  border-radius: 50%;
+  line-height: calc(60px - 12px);
+  font-size: 40px;
+
+  color: #465b52;
+  transition: 0.5s;
+}
+
+ul li:nth-child(1) a:hover .fab {
+  color: #3b5998;
+}
+
+ul li:nth-child(2) a:hover .fab {
+  color: #00aced;
+}
+
+ul li:nth-child(3) a:hover .fab {
+  color: #dd4b39;
+}
+
+ul li:nth-child(4) a:hover .fab {
+  color: #007bb6;
+}
+
+ul li:nth-child(5) a:hover .fab {
+  color: #e4405f;
+}
+
+footer h4 {
+  font-size: 18px;
+  font-weight: bold;
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+
+footer p {
+  font-size: 13px;
+  margin: 0 0 8px 0;
+}
+
+footer .col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+footer a {
+  font-size: 15px;
+  text-decoration: none;
+  margin-bottom: 10px;
+  color: rgb(28, 27, 27);
+}
+
+footer .install .row img {
+  border: 1px solid #088178;
+  border-radius: 6px;
+}
+
+footer .install img {
+  margin: 10px 0 15px 0;
+}
+
+footer .follow i:hover,
+footer a:hover {
+  color: #088178;
+}
+#newsletter .form {
+  width: 70%;
+}
+#newsletter {
+  padding: 40px 20px;
+}
+#newsletter .form {
+  width: 100%;
+}
+
+
+#newsletter {
+  background-image: url("/src/pages/banner/b1.jpg");
+  background-repeat: no-repeat;
+  background-position: 20% 30%;
+  background-color: #041e42;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+#newsletter h4 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #fff;
+}
+
+#newsletter p {
+  font-size: 14px;
+  font-weight: 600;
+  color: #818ea0;
+}
+
+#newsletter p span {
+  color: #ffbd27;
+}
+
+
+
+
+

@@ -33,6 +33,8 @@ import ProductEditPage from './pages/ProductEditPage';
 import OrderListPage from './pages/OrderListPage';
 import UserListPage from './pages/UserListPage';
 import UserEditPage from './pages/UserEditPage';
+import { useMediaQuery } from 'react-responsive';
+import Footer from './pages/FooterPage';
 
 function App() {
   const { state, dispatch: ctxDispatch } = useContext(Store);
@@ -45,6 +47,14 @@ function App() {
     localStorage.removeItem('paymentMethod');
     window.location.href = '/signin';
   };
+  const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
+  const [isMobileView, setIsMobileView] = useState(isMobile);
+
+  useEffect(() => {
+    setIsMobileView(isMobile);
+    console.log(isMobile);
+  }, [isMobile]);
+
   const [sidebarIsOpen, setSidebarIsOpen] = useState(false);
   const [categories, setCategories] = useState([]);
 
@@ -88,18 +98,10 @@ function App() {
               <Navbar.Collapse id="basic-navbar-nav">
                 <SearchBox />
                 <Nav className="me-auto  w-100  justify-content-end">
-                  <Link to="/cart" className="nav-link">
-                    Cart
-                    {cart.cartItems.length > 0 && (
-                      <Badge pill bg="danger">
-                        {cart.cartItems.reduce((a, c) => a + c.quantity, 0)}
-                      </Badge>
-                    )}
-                  </Link>
                   {userInfo ? (
                     <NavDropdown title={userInfo.name} id="basic-nav-dropdown">
                       <LinkContainer to="/profile">
-                        <NavDropdown.Item>User Profile</NavDropdown.Item>
+                        <NavDropdown.Item>Profile Update</NavDropdown.Item>
                       </LinkContainer>
                       <LinkContainer to="/orderhistory">
                         <NavDropdown.Item>Order History</NavDropdown.Item>
@@ -134,6 +136,14 @@ function App() {
                       </LinkContainer>
                     </NavDropdown>
                   )}
+                  <Link to="/cart" className="nav-link">
+                    Cart
+                    {cart.cartItems.length > 0 && (
+                      <Badge pill bg="danger">
+                        {cart.cartItems.reduce((a, c) => a + c.quantity, 0)}
+                      </Badge>
+                    )}
+                  </Link>
                 </Nav>
               </Navbar.Collapse>
             </Container>
@@ -146,7 +156,11 @@ function App() {
               : 'side-navbar d-flex justify-content-between flex-wrap flex-column'
           }
         >
-          <Nav className="flex-column text-white w-100 p-2">
+          <Nav
+            className={`flex-column text-white w-100 p-2 ${
+              isMobileView ? 'mobile-categories' : ''
+            }`}
+          >
             <Nav.Item>
               <strong>Categories</strong>
             </Nav.Item>
@@ -258,10 +272,14 @@ function App() {
             </Routes>
           </Container>
         </main>
-        {/* footer right here */}
+        {/* footer right here 
         <footer>
-          <div className="text-center">All rights reserved</div>
-        </footer>
+          {/*<div className="text-center">All rights reserved</div>
+        </footer> */}
+        <Container className="mt-3">
+          <Footer />
+        </Container>
+        
       </div>
     </BrowserRouter>
   );

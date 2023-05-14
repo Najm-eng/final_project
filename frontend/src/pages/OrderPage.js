@@ -211,7 +211,14 @@ export default function OrderPage() {
                   Delivered at {order.deliveredAt}
                 </MessageBox>
               ) : (
-                <MessageBox variant="danger">Not Delivered</MessageBox>
+                <MessageBox variant="danger">
+                  {order.isPaid
+                    ? `Will be delivered by ${new Date(
+                        new Date(order.paidAt).getTime() +
+                          3 * 24 * 60 * 60 * 1000
+                      ).toDateString()}`
+                    : 'Not Delivered'}
+                </MessageBox>
               )}
             </Card.Body>
           </Card>
