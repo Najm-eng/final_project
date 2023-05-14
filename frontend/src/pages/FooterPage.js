@@ -17,11 +17,10 @@ const Footer = () => {
         <div className="col">
           <h4>Contact</h4>
           <p>
-            <strong>Address: </strong> 562 Wellington Road, Street 32, San
-            Francisco
+            <strong>Address: </strong> UNKNOWN
           </p>
           <p>
-            <strong>Phone:</strong> +01 2222 365 /(+91) 01 2345 6789
+            <strong>Phone:</strong> +111 111 1111 
           </p>
           <p>
             <strong>Hours:</strong> 10:00 - 18:00, Mon - Sat
@@ -72,8 +71,8 @@ const Footer = () => {
           <h4>Install App</h4>
           <p>From App Store or Google Play</p>
           <div className="row">
-          <img src="/pay/app.jpg" alt="" />
-          <img src="/pay/play.jpg" alt="" />
+            <img src="/pay/app.jpg" alt="" />
+            <img src="/pay/play.jpg" alt="" />
           </div>
           <p>Secured Payment Gateways </p>
           <img src="/pay/pay.png" alt="" />
