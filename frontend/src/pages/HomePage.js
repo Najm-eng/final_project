@@ -9,6 +9,8 @@ import Product from '../components/Product';
 import { Helmet } from 'react-helmet-async';
 import LoadingBox from '../components/LoadingBox';
 import MessageBox from '../components/MessageBox';
+import { Carousel } from 'react-responsive-carousel';
+import 'react-responsive-carousel/lib/styles/carousel.min.css'; // requires a loader
 //import logger from 'use-reducer-logger';
 // Reducer function for managing product fetching state
 const reducer = (state, action) => {
@@ -26,7 +28,9 @@ const reducer = (state, action) => {
 
 function HomePage() {
   //const [products, setProducts] = useState([]);
-  // Use reducer to manage the state of products, loading, and error
+  // Use reducer to manage the state of products, loading, and error.
+  const [currentPage, setCurrentPage] = useState(1); // Current page number
+  const [productsPerPage] = useState(15);
   const loggedUseReducer = loggerMiddleware(useReducer);
   const [{ loading, error, products }, dispatch] = loggedUseReducer(reducer, {
     products: [],
@@ -50,12 +54,53 @@ function HomePage() {
     };
     fetchData();
   }, []);
+  const indexOfLastProduct = currentPage * productsPerPage;
+  // Calculate the index of the first product to display on the current page
+  const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
+  // Slice the products array to get the products for the current page
+  const totalPages = Math.ceil(products.length / productsPerPage);
+
+  // Function to handle navigation to the next page
+  const nextPage = () => {
+    setCurrentPage((prevPage) => prevPage + 1);
+  };
+
+  // Function to handle navigation to the previous page
+  const previousPage = () => {
+    setCurrentPage((prevPage) => prevPage - 1);
+  };
+  const currentProducts = products.slice(
+    indexOfFirstProduct,
+    indexOfLastProduct
+  );
+
   return (
     <div>
       <Helmet>
         <title>O&N Market</title>
       </Helmet>
-      <h1>list of products</h1>
+      <Carousel autoPlay>
+        <div>
+          <img src="/banner/b4.jpg" alt="" />
+          <p className="legend">Casual Denim Jacket</p>
+        </div>
+        <div>
+          <img src="/banner/b7.jpg" alt="" />
+          <p className="legend">Gold Plated Necklace</p>
+        </div>
+        <div>
+          <img src="/banner/b10.jpg" alt="" />
+          <p className="legend">Cozy Wool Knit Sweater</p>
+        </div>
+        <div>
+          <img src="/banner/b18.jpg" alt="" />
+          <p className="legend">Casual Summer Maxi Dress</p>
+        </div>
+        <div>
+          <img src="/banner/b17.jpg" alt="" />
+          <p className="legend">Elegant Summer Dress</p>
+        </div>
+      </Carousel>
       {/* Container for product list */}
       <div className="products">
         {/* Show loading message if data is being fetched from ladingbox.js*/}
@@ -67,21 +112,50 @@ function HomePage() {
         ) : (
           // Map through the products and create a product card for each
           <Row>
-            {products.map((product) => (
+            {currentProducts.map((product, index) => (
               <Col
                 key={product.slug}
-                xs={6}//2
-                sm={6}//2
-                md={4}//3
-                lg={3}//4
+                xs={6}
+                sm={6}
+                md={4}
+                lg={3}
                 xl={2}
                 className="products"
               >
-                <Product product={product}></Product>
+                <div
+                  className={`product ${
+                    index === currentProducts.length - 1 ? 'product-last' : ''
+                  }`}
+                >
+                  <Product
+                    product={product}
+                    imageClassName={
+                      index === currentProducts.length - 1
+                        ? 'product-image-fixed-height'
+                        : ''
+                    }
+                  ></Product>
+                </div>
               </Col>
             ))}
           </Row>
         )}
+        <div>
+          <button
+            onClick={previousPage}
+            disabled={currentPage === 1}
+            className="custom-button"
+          >
+            Previous
+          </button>
+          <button
+            onClick={nextPage}
+            disabled={currentPage === totalPages}
+            className="custom-button"
+          >
+            Next
+          </button>
+        </div>
       </div>
     </div>
   );

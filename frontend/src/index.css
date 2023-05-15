@@ -35,8 +35,8 @@ main {
 
 /* Product card container styles */
 .product {
-  border: 1px #404040 solid;
-  margin: 1rem;
+  border: 1px #ede3e3 solid;
+  margin: 0.2rem;
   display: flex;
   flex-direction: column;
 }
@@ -44,7 +44,7 @@ main {
 /* Product image styles */
 
 .product-image {
-  width: 100;
+  width: 100%;
   height: 0;
   padding-bottom: 125%; /* This is for an aspect ratio of 4:3. Adjust as needed. */
   background-position: center;
@@ -324,4 +324,27 @@ footer a:hover {
 
 #newsletter p span {
   color: #ffbd27;
+}
+
+.custom-button {
+  background-color: #f0c040;
+  color: #000000;
+  padding: 10px 20px;
+  margin: 0.2rem;
+  border: 1px solid blue;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.custom-button:hover {
+  background-color: blue;
+  color: white;
+}
+
+.custom-button:disabled {
+  background-color: #cccccc;
+  border: 1px solid rgb(234, 234, 243);
+  cursor: not-allowed;
 }
