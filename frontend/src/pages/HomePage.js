@@ -79,7 +79,7 @@ function HomePage() {
       <Helmet>
         <title>O&N Market</title>
       </Helmet>
-      <Carousel autoPlay>
+      <Carousel autoPlay infiniteLoop>
         <div>
           <img src="/banner/b4.jpg" alt="" />
           <p className="legend">Casual Denim Jacket</p>

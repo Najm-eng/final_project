@@ -10,6 +10,10 @@ const Footer = () => {
             Get E-mail updates about our latest shop and{' '}
             <span>special offers.</span>{' '}
           </p>
+          <p>
+            Signing up gives you exclusive access to our <a href="#">library</a>
+            .
+          </p>
         </div>
       </section>
 
@@ -20,7 +24,7 @@ const Footer = () => {
             <strong>Address: </strong> UNKNOWN
           </p>
           <p>
-            <strong>Phone:</strong> +111 111 1111 
+            <strong>Phone:</strong> +111 111 1111
           </p>
           <p>
             <strong>Hours:</strong> 10:00 - 18:00, Mon - Sat
