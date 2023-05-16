@@ -11,8 +11,8 @@ const Footer = () => {
             <span>special offers.</span>{' '}
           </p>
           <p>
-            Signing up gives you exclusive access to our <a href="#">library</a>
-            .
+            Signing up gives you exclusive access to our{' '}
+            <a href="https://mybrary-o.herokuapp.com/">library</a>.
           </p>
         </div>
       </section>
